@@ -56,7 +56,7 @@ LP-DIXIT currently comes with the following datasets:
 
 FRUNI and FR200K are benchamrk datasets that contain ground truth explanations for each prediction.
 
-[Download the included datasets](https://figshare.com/s/cfe5eced5cf283afa016)
+Download the included datasets https://figshare.com/s/cfe5eced5cf283afa016 
 
 [Add other datasets](./data/README.md)
 
@@ -70,7 +70,7 @@ LP-DIXIT currently provides an implementation for:
 
 We pre-trained such models on all the KGs.
 
-[Download the pre-trained models](https://figshare.com/s/cfe5eced5cf283afa016)
+Download the pre-trained models https://figshare.com/s/cfe5eced5cf283afa016
 
 [Add other models](./kge_models/README.md)
 
@@ -189,7 +189,7 @@ Everything is reproducible, to start only the hyper-parameter ranges are needed!
 
 The ground truth explanations in the benchmarks are in the explanations folder having `benchmark` as value for the field `method` in the file name.
 
-[Download](https://figshare.com/s/cfe5eced5cf283afa016) experiment results, configurations, and pre/trained models. 
+Download https://figshare.com/s/cfe5eced5cf283afa016 experiment results, configurations, and pre/trained models. 
 
 We executed the experiments on the cluster [Leonardo@Cineca](https://wiki.u-gov.it/confluence/display/SCAIUS/HPC+User+Guide) with Python 3.11.6
 
