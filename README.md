@@ -25,6 +25,7 @@ In the paper we propose four declinations of LP-DIXIT: LP-DIXIT, LP-DIXIT-O, LP-
 LP-DIXIT-O includes in the prompt a set of entities computed through the KGE model and a natural language instruction stating that the LLM must pick its response from such set, LP-DIXIT-D includes in the prompt a set of examples (or demonstrations) of solved LP queries, and LP-DIXIT-OD combines both LP-DIXIT-O, and LP-DIXIT-D.
 
 Read our paper for a detailed formalization of the approach!
+Make sure to also read the Report on Additional Experiments!
 
 ## Installation
 
@@ -186,6 +187,7 @@ We used this code to perform the experiments in our paper, specifically:
 
 We used this code for all the phases of the experiments: from hyper-parameter tuning to evaluation of explanations.
 Everything is reproducible, to start only the hyper-parameter ranges are needed!
+Even the execution logs are available!
 
 The ground truth explanations in the benchmarks are in the explanations folder having `benchmark` as value for the field `method` in the file name.
 
