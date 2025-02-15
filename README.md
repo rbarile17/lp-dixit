@@ -155,8 +155,8 @@ Generate the predictions with the previous commands or upload your own predictio
 We used this code to perform all the experiments in the paper.
 
 [Download KGs](https://doi.org/10.6084/m9.figshare.27292017.v1)
-[Download learned embeddings](10.6084/m9.figshare.28424246) 
-[Download experiment results and execution logs]()
+[Download learned embeddings](https://doi.org/10.6084/m9.figshare.28424246) 
+[Download experiment results and execution logs](https://doi.org/10.6084/m9.figshare.28424321)
 
 We executed the experiments on the cluster [Leonardo@Cineca](https://wiki.u-gov.it/confluence/display/SCAIUS/HPC+User+Guide) with Python 3.11.6
 
