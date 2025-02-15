@@ -5,28 +5,13 @@
 This repository contains the official code for the paper "LP-DIXIT: Evaluating Explanations of Link Predictions on Knowledge Graphs using Large Language Models" that presents LP-DIXIT.
 It evaluates explanations for _Link Prediction_ (LP) tasks on _Knowledge Graphs_ (KGs) in RDF.
 It labels each explanation as **bad**, **neutral**, or **good**.
-The label is the _Forward Simulatability Variation_ (FSV) which measures the variation of predictability of an inference (LP) caused by an explanations; an inference is _predictable_ if a verifier can hypothesize its output given the same input and without replicating the same process.
+The label is the _Forward Simulatability Variation_ (FSV) which measures the variation of predictability of an inference (LP) caused by explanations; an inference is _predictable_ without (with) explanation if a verifier can hypothesize its output given the same input (and the explanation).
 In the paper we focus on LP methods based on _Knowledge Graph Embeddings_ (KGE) and on _post-hoc_ methods to eXplain LP (LP-X).
 
 LP-DIXIT employs a _Large Language Model_ (LLM) as a verifier to automate the evaluation!
-It builds prompts by filling out our prompt template (sections separated by blank lines and variable parts in curly braces):
 
-```
-An RDF triple is a statement (subject, predicate, object). The subject and the object are entities, and the predicate is a relation between the subject and the object. Perform a Link Prediction (LP) task, specifically, given an incomplete RDF triple (subject, predicate, ?), predict the missing object that completes the triple and makes it a true statement.
+Read the paper for a detailed formalization of the approach!
 
-Strict requirement: output solely the name of a single object entity, discard any explanation or other text.
-Correct format: Italy
-Incorrect format: The object entity is Italy.
-
-({s}, {p}, ?)
-
-{Explanation}
-```
-
-In the paper we propose four declinations of LP-DIXIT: LP-DIXIT, LP-DIXIT-O, LP-DIXIT-D, and LP-DIXIT-OD that combines the first two.
-LP-DIXIT-O includes in the prompt a set of entities computed through the KGE model and a natural language instruction stating that the LLM must pick its response from such set, LP-DIXIT-D includes in the prompt a set of examples (or demonstrations) of solved LP queries, and LP-DIXIT-OD combines both LP-DIXIT-O, and LP-DIXIT-D.
-
-Read our paper for a detailed formalization of the approach!
 Make sure to also read the Report on Additional Experiments!
 
 ## Installation
@@ -46,34 +31,19 @@ pip install -r requirements.txt
 
 ### Data
 
-LP-DIXIT currently comes with the following datasets:
+LP-DIXIT supports any RDF KG.
 
-* FB15k-237
-* WN18RR
-* YAGO3-10
-* DB50K
-* DB100K
-* YAGO4-20
-* FRUNI
-* FR200K
-
-FRUNI and FR200K are benchamrk datasets that contain ground truth explanations for each prediction.
-
-Download the included datasets https://figshare.com/s/cfe5eced5cf283afa016 
-
-[Add other datasets](./data/README.md)
+[Read format details](./data/README.md)
 
 ### KGE Models
 
-LP-DIXIT currently provides an implementation for:
+LP-DIXIT currently supports an implementation for:
 
 * TransE 
 * ComplEx
 * ConvE
 
 We pre-trained such models on all the KGs.
-
-Download the pre-trained models https://figshare.com/s/cfe5eced5cf283afa016
 
 [Add other models](./kge_models/README.md)
 
@@ -182,21 +152,14 @@ Generate the predictions with the previous commands or upload your own predictio
 
 ## Experiments
 
-We used this code to perform the experiments in our paper, specifically:
+We used this code to perform all the experiments in the paper.
 
-* we measured the alignment of LP-DIXIT with human judgement;
-* we adopted LP-DIXIT to compare, on several well known KGs, state-of-the-art (SOTA) LP-X methods.
-
-We used this code for all the phases of the experiments: from hyper-parameter tuning to evaluation of explanations.
-Everything is reproducible, to start only the hyper-parameter ranges are needed!
-Even the execution logs are available!
-
-The ground truth explanations in the benchmarks are in the explanations folder having `benchmark` as value for the field `method` in the file name.
-
-Download https://figshare.com/s/cfe5eced5cf283afa016 experiment results, configurations, and pre/trained models. 
+[Download KGs](https://doi.org/10.6084/m9.figshare.27292017.v1)
+[Download learned embeddings](10.6084/m9.figshare.28424246) 
+[Download experiment results and execution logs]()
 
 We executed the experiments on the cluster [Leonardo@Cineca](https://wiki.u-gov.it/confluence/display/SCAIUS/HPC+User+Guide) with Python 3.11.6
 
-## Citation
+## ACM Reference
 
-TODO IF ACCEPTED
+Roberto Barile, Claudia d’Amato, and Nicola Fanizzi. 2025. LP-DIXIT: Evaluating Explanations of Link Predictions on Knowledge Graphs using Large Language Models. In Proceedings of the ACM Web Conference 2025 (WWW ’25), April 28–May 2, 2025, Sydney, NSW, Australia. ACM, New York, NY, USA, 9 pages. https://doi.org/10.1145/3696410.3714667
