@@ -2,7 +2,7 @@
 
 [![DOI](https://zenodo.org/badge/794102618.svg)](https://doi.org/10.5281/zenodo.14875932)
 
-This repository contains the official code for the paper UNDER REVIEW that presents LP-DIXIT.
+This repository contains the official code for the paper "LP-DIXIT: Evaluating Explanations of Link Predictions on Knowledge Graphs using Large Language Models" that presents LP-DIXIT.
 It evaluates explanations for _Link Prediction_ (LP) tasks on _Knowledge Graphs_ (KGs) in RDF.
 It labels each explanation as **bad**, **neutral**, or **good**.
 The label is the _Forward Simulatability Variation_ (FSV) which measures the variation of predictability of an inference (LP) caused by an explanations; an inference is _predictable_ if a verifier can hypothesize its output given the same input and without replicating the same process.
