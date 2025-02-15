@@ -1,5 +1,7 @@
 # LP-DIXIT
 
+[![DOI](https://zenodo.org/badge/794102618.svg)](https://doi.org/10.5281/zenodo.14875932)
+
 This repository contains the official code for the paper UNDER REVIEW that presents LP-DIXIT.
 It evaluates explanations for _Link Prediction_ (LP) tasks on _Knowledge Graphs_ (KGs) in RDF.
 It labels each explanation as **bad**, **neutral**, or **good**.
