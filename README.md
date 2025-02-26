@@ -12,7 +12,7 @@ LP-DIXIT employs a _Large Language Model_ (LLM) as a verifier to automate the ev
 
 Read the paper for a detailed formalization of the approach!
 
-Make sure to also read the Report on Additional Experiments!
+Check the Report on Additional Experiments!
 
 ## Installation
 
